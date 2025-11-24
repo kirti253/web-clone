@@ -1,5 +1,4 @@
 'use client'
-
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -32,15 +31,11 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Image
               src="/savekey.png"
-              alt="Savekey Technology logo"
-              width={48}
-              height={48}
-              className="w-12 h-12 rounded-full object-contain"
+              width={80}
+              height={80}
+              className="w-20 h-20 rounded-full object-contain"
+              alt="Savekey Technology Logo"
             />
-            <div className="flex flex-col">
-              <span className="font-bold text-brand-primary">SAVEKEY</span>
-              <span className="text-xs text-gray-600">Technology</span>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
