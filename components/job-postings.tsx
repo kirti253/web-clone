@@ -40,27 +40,27 @@ export default function JobPostings() {
   const [expandedJob, setExpandedJob] = useState<number | null>(null)
 
   return (
-    <div className="bg-white py-16 px-6">
+    <div className="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-brand-primary mb-2">Job Posting</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-primary mb-6 sm:mb-8">Job Posting</h2>
         
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {jobs.map((job) => (
-            <div key={job.id} className="flex gap-6">
+            <div key={job.id} className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               {/* Job title box - alternating colors */}
-              <div className={`w-64 px-6 py-6 rounded text-white font-semibold ${
+              <div className={`w-full sm:w-56 md:w-64 px-4 sm:px-6 py-4 sm:py-6 rounded text-white font-semibold flex-shrink-0 ${
                 job.id % 2 === 1 ? 'bg-brand-navy' : 'bg-brand-primary'
               }`}>
-                <h3 className="text-xl font-bold mb-2">{job.title}</h3>
-                <p className="text-sm opacity-90">{job.employment}</p>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2">{job.title}</h3>
+                <p className="text-xs sm:text-sm opacity-90">{job.employment}</p>
               </div>
 
               {/* Job description */}
-              <div className="flex-1 flex justify-between items-start gap-6">
-                <p className="text-gray-700 text-base leading-relaxed">
+              <div className="flex-1 flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-6">
+                <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                   {job.description}
                 </p>
-                <button className="bg-brand-primary text-white px-6 py-2 rounded hover:bg-brand-navy transition whitespace-nowrap">
+                <button className="bg-brand-primary text-white px-4 sm:px-6 py-2 rounded hover:bg-brand-navy transition whitespace-nowrap text-xs sm:text-sm md:text-base flex-shrink-0 w-full sm:w-auto">
                   Get Started
                 </button>
               </div>

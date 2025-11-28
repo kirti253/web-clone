@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { motion } from 'framer-motion'
 import Header from '@/components/header'
 import Hero from '@/components/hero'
@@ -32,7 +33,9 @@ const staggerContainer = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
-      <Header />
+      <Suspense fallback={null}>
+        <Header />
+      </Suspense>
       
       <motion.div
         initial="hidden"

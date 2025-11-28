@@ -1,11 +1,16 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <header className="w-full bg-white shadow-sm">
@@ -54,17 +59,19 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className="lg:hidden p-2 hover:bg-gray-100 rounded transition"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {mounted && (
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="lg:hidden p-2 hover:bg-gray-100 rounded transition"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {mounted && isOpen && (
           <nav className="lg:hidden flex flex-col gap-3 sm:gap-4 mt-4 pb-4 border-t pt-4">
             <Link 
               href="/" 
