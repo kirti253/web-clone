@@ -23,9 +23,11 @@ export default function CoffeeMessage() {
           <p className="text-gray-600 text-lg mb-6">
             Visit our office and discuss your career opportunities over coffee with our team.
           </p>
-          <button className="bg-brand-primary text-white px-8 py-3 rounded hover:bg-brand-navy transition text-lg">
-            Schedule a Visit
-          </button>
+          <a href="/contact">
+            <button className="bg-brand-primary text-white px-8 py-3 rounded hover:bg-brand-navy transition text-lg">
+              Schedule a Visit
+            </button>
+          </a>
         </div>
       </div>
     </div>

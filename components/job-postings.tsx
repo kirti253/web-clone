@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 interface JobPosting {
   id: number;
@@ -75,9 +76,11 @@ export default function JobPostings() {
                 <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                   {job.description}
                 </p>
-                <button className="bg-brand-primary text-white px-4 sm:px-6 py-2 rounded hover:bg-brand-navy transition whitespace-nowrap text-xs sm:text-sm md:text-base flex-shrink-0 w-full sm:w-auto">
-                  Get Started
-                </button>
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <button className="bg-brand-primary text-white px-4 sm:px-6 py-2 rounded hover:bg-brand-navy transition whitespace-nowrap text-xs sm:text-sm md:text-base flex-shrink-0 w-full sm:w-auto">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
