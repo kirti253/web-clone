@@ -1030,7 +1030,6 @@ export default function SolutionsPage() {
       <ITHardwareProducts onSelectCategory={setSelectedCategory} />
       <AccessoriesConnectivity onSelectCategory={setSelectedCategory} />
       <RepairServices onSelectCategory={setSelectedCategory} />
-
       {selectedCategory && (
         <ProductListModal
           category={selectedCategory}

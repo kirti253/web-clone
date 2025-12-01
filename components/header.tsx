@@ -43,9 +43,6 @@ export default function Header() {
             <Link href="/" className="hover:text-blue-600 transition whitespace-nowrap">Home</Link>
             <Link href="/about" className="hover:text-blue-600 transition whitespace-nowrap">About Us</Link>
             <Link href="/solutions" className="hover:text-blue-600 transition whitespace-nowrap">Solutions</Link>
-            <Link href="/recruitment" className="hover:text-blue-600 transition whitespace-nowrap">Recruitment</Link>
-            <Link href="/training" className="hover:text-blue-600 transition whitespace-nowrap">Training</Link>
-            <Link href="/career" className="hover:text-blue-600 transition whitespace-nowrap">Career</Link>
             <Link href="/clients" className="hover:text-blue-600 transition whitespace-nowrap">Clients</Link>
             <Link href="/contact" className="hover:text-blue-600 transition whitespace-nowrap">Contact Us</Link>
             <button className="bg-blue-600 text-white px-4 xl:px-6 py-2 rounded hover:bg-blue-800 transition whitespace-nowrap text-sm xl:text-base">
@@ -86,27 +83,6 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
             >
               Solutions
-            </Link>
-            <Link 
-              href="/recruitment" 
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Recruitment
-            </Link>
-            <Link 
-              href="/training" 
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Training
-            </Link>
-            <Link 
-              href="/career" 
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Career
             </Link>
             <Link 
               href="/clients" 
