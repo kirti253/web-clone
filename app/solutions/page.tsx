@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 import {
   Laptop,
   Smartphone,
@@ -13,9 +13,9 @@ import {
   Shield,
   X,
   ShoppingCart,
-} from "lucide-react"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+} from "lucide-react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 // Product data for all categories
 const PRODUCT_DATA = {
@@ -32,7 +32,8 @@ const PRODUCT_DATA = {
       id: 2,
       name: "MacBook Air M2",
       price: 102999,
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop",
       brand: "Apple",
       specs: "M2 Chip, 8GB RAM, 256GB SSD",
     },
@@ -40,7 +41,8 @@ const PRODUCT_DATA = {
       id: 3,
       name: "HP Pavilion 15",
       price: 54999,
-      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=500&fit=crop",
       brand: "HP",
       specs: "Ryzen 5, 8GB RAM, 256GB SSD",
     },
@@ -178,7 +180,8 @@ const PRODUCT_DATA = {
       id: 10,
       name: "Noctua PC Build",
       price: 126999,
-      image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
       brand: "Custom",
       specs: "RTX 3060, i7, 16GB, 1TB",
     },
@@ -310,7 +313,8 @@ const PRODUCT_DATA = {
       id: 6,
       name: "WiFi Mesh System",
       price: 7999,
-      image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=500&h=500&fit=crop",
       brand: "ASUS",
       specs: "3-Pack, Whole Home",
     },
@@ -360,7 +364,8 @@ const PRODUCT_DATA = {
       id: 2,
       name: "Laptop Battery Replacement",
       price: 4999,
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=500&h=500&fit=crop",
       brand: "Professional Service",
       specs: "Genuine Parts, Warranty",
     },
@@ -376,7 +381,8 @@ const PRODUCT_DATA = {
       id: 4,
       name: "Motherboard Repair",
       price: 12999,
-      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=500&fit=crop",
       brand: "Professional Service",
       specs: "Soldering, Component Repair",
     },
@@ -384,7 +390,8 @@ const PRODUCT_DATA = {
       id: 5,
       name: "SSD/HDD Data Recovery",
       price: 7999,
-      image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
       brand: "Professional Service",
       specs: "98% Success Rate",
     },
@@ -434,7 +441,8 @@ const PRODUCT_DATA = {
       id: 1,
       name: "Premium Phone Case",
       price: 899,
-      image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&h=500&fit=crop",
       brand: "Spigen",
       specs: "Shock-Proof, Clear Design",
     },
@@ -442,7 +450,8 @@ const PRODUCT_DATA = {
       id: 2,
       name: "Tempered Glass Screen Protector",
       price: 499,
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
       brand: "NILLKIN",
       specs: "9H Hardness, Anti-Scratch",
     },
@@ -450,7 +459,8 @@ const PRODUCT_DATA = {
       id: 3,
       name: "Fast Charging Adapter 65W",
       price: 1499,
-      image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
       brand: "Anker",
       specs: "Quick Charge 4.0, Compact",
     },
@@ -458,7 +468,8 @@ const PRODUCT_DATA = {
       id: 4,
       name: "Power Bank 20000mAh",
       price: 1999,
-      image: "https://images.unsplash.com/photo-1591060176046-fcf12d6e4a64?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1591060176046-fcf12d6e4a64?w=500&h=500&fit=crop",
       brand: "Mi",
       specs: "Dual USB, LED Display",
     },
@@ -466,7 +477,8 @@ const PRODUCT_DATA = {
       id: 5,
       name: "Wireless Charging Pad",
       price: 1299,
-      image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
       brand: "Belkin",
       specs: "10W Fast Charging, Compact",
     },
@@ -474,7 +486,8 @@ const PRODUCT_DATA = {
       id: 6,
       name: "USB-C Charging Cable 2M",
       price: 599,
-      image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
       brand: "Baseus",
       specs: "Braided, Durable",
     },
@@ -482,7 +495,8 @@ const PRODUCT_DATA = {
       id: 7,
       name: "Bluetooth Speaker",
       price: 2499,
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
       brand: "JBL",
       specs: "Waterproof, 12W Speaker",
     },
@@ -490,7 +504,8 @@ const PRODUCT_DATA = {
       id: 8,
       name: "Phone Ring Stand",
       price: 399,
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
       brand: "Generic",
       specs: "360° Rotation, Magnetic",
     },
@@ -498,7 +513,8 @@ const PRODUCT_DATA = {
       id: 9,
       name: "Screen Cleaning Kit",
       price: 299,
-      image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500&h=500&fit=crop",
       brand: "Microfiber",
       specs: "Anti-Static, Lint-Free",
     },
@@ -506,7 +522,8 @@ const PRODUCT_DATA = {
       id: 10,
       name: "Phone Pop Socket",
       price: 349,
-      image: "https://images.unsplash.com/photo-1511693789497-ed1d8aae9cb0?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1511693789497-ed1d8aae9cb0?w=500&h=500&fit=crop",
       brand: "PopSocket",
       specs: "Expandable, Multiple Colors",
     },
@@ -516,7 +533,8 @@ const PRODUCT_DATA = {
       id: 1,
       name: "Laptop Backpack Pro",
       price: 2499,
-      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
       brand: "Targus",
       specs: "Water-Resistant, 17 inch",
     },
@@ -524,7 +542,8 @@ const PRODUCT_DATA = {
       id: 2,
       name: "Wireless Mouse",
       price: 1299,
-      image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop",
       brand: "Logitech",
       specs: "2.4GHz, 18 Month Battery",
     },
@@ -532,7 +551,8 @@ const PRODUCT_DATA = {
       id: 3,
       name: "Mechanical Keyboard RGB",
       price: 3999,
-      image: "https://images.unsplash.com/photo-1587829191301-755f88d2c69b?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1587829191301-755f88d2c69b?w=500&h=500&fit=crop",
       brand: "Corsair",
       specs: "Cherry MX Switches, Backlit",
     },
@@ -540,7 +560,8 @@ const PRODUCT_DATA = {
       id: 4,
       name: "Laptop Cooling Pad",
       price: 1999,
-      image: "https://images.unsplash.com/photo-1592286927505-1def25115558?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1592286927505-1def25115558?w=500&h=500&fit=crop",
       brand: "HAVIT",
       specs: "5 Fan, USB Powered",
     },
@@ -548,7 +569,8 @@ const PRODUCT_DATA = {
       id: 5,
       name: "USB-C Docking Station",
       price: 4499,
-      image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
       brand: "Anker",
       specs: "7-in-1, 100W Power Delivery",
     },
@@ -556,7 +578,8 @@ const PRODUCT_DATA = {
       id: 6,
       name: 'Laptop Screen Protector 15.6"',
       price: 1499,
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
       brand: "3M",
       specs: "Blue Light Filter, Anti-Glare",
     },
@@ -564,7 +587,8 @@ const PRODUCT_DATA = {
       id: 7,
       name: "USB-C Hub Adapter",
       price: 1899,
-      image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
       brand: "Baseus",
       specs: "5 Port, Multi-Device Support",
     },
@@ -572,7 +596,8 @@ const PRODUCT_DATA = {
       id: 8,
       name: "Laptop Stand Aluminum",
       price: 1599,
-      image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&h=500&fit=crop",
       brand: "Rain Design",
       specs: "Adjustable, Ergonomic Design",
     },
@@ -580,7 +605,8 @@ const PRODUCT_DATA = {
       id: 9,
       name: "Webcam 1080P HD",
       price: 2999,
-      image: "https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1606986628025-35d57e735ae0?w=500&h=500&fit=crop",
       brand: "Logitech",
       specs: "Auto Focus, Built-in Mic",
     },
@@ -588,12 +614,13 @@ const PRODUCT_DATA = {
       id: 10,
       name: "Laptop Sleeve Case",
       price: 899,
-      image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&h=500&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&h=500&fit=crop",
       brand: "Tomtoc",
       specs: "Neoprene, 15.6 inch Compatible",
     },
   ],
-}
+};
 
 // Product Card Component
 const ProductCard = ({ product, onAddCart }) => {
@@ -608,10 +635,14 @@ const ProductCard = ({ product, onAddCart }) => {
       </div>
       <div className="p-4">
         <p className="text-sm text-gray-500 mb-1">{product.brand}</p>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 truncate">{product.name}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2 truncate">
+          {product.name}
+        </h3>
         <p className="text-xs text-gray-600 mb-3">{product.specs}</p>
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-blue-600">₹{product.price.toLocaleString("en-IN")}</span>
+          <span className="text-2xl font-bold text-blue-600">
+            ₹{product.price.toLocaleString("en-IN")}
+          </span>
           <button
             onClick={() => onAddCart(product)}
             className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-200"
@@ -621,8 +652,8 @@ const ProductCard = ({ product, onAddCart }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // Product List Modal Component
 const ProductListModal = ({ category, products, onClose }) => {
@@ -634,14 +665,14 @@ const ProductListModal = ({ category, products, onClose }) => {
     repairs: "Repair Services",
     mobileAccessories: "Mobile Accessories",
     laptopAccessories: "Laptop Accessories",
-  }
+  };
 
-  const [cartItems, setCartItems] = useState([])
-  const [showCart, setShowCart] = useState(false)
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
   const handleAddCart = (product) => {
-    setCartItems([...cartItems, product])
-  }
+    setCartItems([...cartItems, product]);
+  };
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
@@ -649,7 +680,10 @@ const ProductListModal = ({ category, products, onClose }) => {
         {/* Header */}
         <div className="sticky top-0 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 flex items-center justify-between">
           <h2 className="text-3xl font-bold">{categoryNames[category]}</h2>
-          <button onClick={onClose} className="hover:bg-white/20 p-2 rounded-lg transition-colors duration-200">
+          <button
+            onClick={onClose}
+            className="hover:bg-white/20 p-2 rounded-lg transition-colors duration-200"
+          >
             <X className="w-6 h-6" />
           </button>
         </div>
@@ -658,22 +692,34 @@ const ProductListModal = ({ category, products, onClose }) => {
         <div className="p-6">
           {showCart ? (
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Shopping Cart ({cartItems.length} items)</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Shopping Cart ({cartItems.length} items)
+              </h3>
               {cartItems.length === 0 ? (
                 <p className="text-gray-600">Your cart is empty</p>
               ) : (
                 <div className="space-y-2">
                   {cartItems.map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between bg-gray-50 p-4 rounded-lg">
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between bg-gray-50 p-4 rounded-lg"
+                    >
                       <div>
-                        <p className="font-semibold text-gray-900">{item.name}</p>
-                        <p className="text-sm text-gray-600">₹{item.price.toLocaleString("en-IN")}</p>
+                        <p className="font-semibold text-gray-900">
+                          {item.name}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          ₹{item.price.toLocaleString("en-IN")}
+                        </p>
                       </div>
                     </div>
                   ))}
                   <div className="bg-blue-50 p-4 rounded-lg mt-4">
                     <p className="text-lg font-bold text-gray-900">
-                      Total: ₹{cartItems.reduce((sum, item) => sum + item.price, 0).toLocaleString("en-IN")}
+                      Total: ₹
+                      {cartItems
+                        .reduce((sum, item) => sum + item.price, 0)
+                        .toLocaleString("en-IN")}
                     </p>
                   </div>
                 </div>
@@ -690,7 +736,11 @@ const ProductListModal = ({ category, products, onClose }) => {
             <>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {products.map((product) => (
-                  <ProductCard key={product.id} product={product} onAddCart={handleAddCart} />
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onAddCart={handleAddCart}
+                  />
                 ))}
               </div>
               {cartItems.length > 0 && (
@@ -707,8 +757,8 @@ const ProductListModal = ({ category, products, onClose }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 // Solutions Hero Component
 const SolutionsHero = () => {
@@ -718,26 +768,36 @@ const SolutionsHero = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200)",
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></div>
       </div>
       <div className="relative max-w-7xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Complete IT Solutions & Services</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Complete IT Solutions & Services
+        </h1>
         <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-          Premium IT Hardware, Accessories & Expert Repair Services Under One Roof
+          Premium IT Hardware, Accessories & Expert Repair Services Under One
+          Roof
         </p>
         <div className="flex flex-wrap justify-center gap-3 text-sm">
-          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">✓ Genuine Products</div>
-          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">✓ Expert Technicians</div>
-          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">✓ Warranty Support</div>
+          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            ✓ Genuine Products
+          </div>
+          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            ✓ Expert Technicians
+          </div>
+          <div className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+            ✓ Warranty Support
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // IT Hardware Products Component
 const ITHardwareProducts = ({ onSelectCategory }) => {
@@ -746,39 +806,70 @@ const ITHardwareProducts = ({ onSelectCategory }) => {
       title: "Laptops",
       description:
         "Premium laptops from Dell, HP, Lenovo, ASUS, and Apple. Perfect for business, gaming, or everyday use.",
-      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
-      features: ["Business Laptops", "Gaming Laptops", "Ultrabooks", "2-in-1 Convertibles"],
+      image:
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+      features: [
+        "Business Laptops",
+        "Gaming Laptops",
+        "Ultrabooks",
+        "2-in-1 Convertibles",
+      ],
       categoryKey: "laptops",
     },
     {
       title: "Desktops",
-      description: "High-performance desktop computers. Custom builds available for specialized requirements.",
-      image: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
-      features: ["Workstations", "Gaming PCs", "All-in-One PCs", "Custom Builds"],
+      description:
+        "High-performance desktop computers. Custom builds available for specialized requirements.",
+      image:
+        "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      features: [
+        "Workstations",
+        "Gaming PCs",
+        "All-in-One PCs",
+        "Custom Builds",
+      ],
       categoryKey: "desktops",
     },
     {
       title: "Mobiles",
-      description: "Latest smartphones from Samsung, Apple, OnePlus, Xiaomi, and more flagship devices.",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
-      features: ["Flagship Models", "Mid-Range Phones", "Budget Smartphones", "Latest Releases"],
+      description:
+        "Latest smartphones from Samsung, Apple, OnePlus, Xiaomi, and more flagship devices.",
+      image:
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+      features: [
+        "Flagship Models",
+        "Mid-Range Phones",
+        "Budget Smartphones",
+        "Latest Releases",
+      ],
       categoryKey: "mobiles",
     },
     {
       title: "Mobile Accessories",
-      description: "Complete range of mobile accessories to enhance and protect your device.",
-      image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800",
-      features: ["Cases & Covers", "Screen Protectors", "Chargers", "Power Banks"],
+      description:
+        "Complete range of mobile accessories to enhance and protect your device.",
+      image:
+        "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800",
+      features: [
+        "Cases & Covers",
+        "Screen Protectors",
+        "Chargers",
+        "Power Banks",
+      ],
       categoryKey: "mobileAccessories",
     },
-  ]
+  ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="it-hardware" className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">IT Hardware Solutions</h2>
-          <p className="text-lg text-gray-600">Click on any category to see 10 products with pricing</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            IT Hardware Solutions
+          </h2>
+          <p className="text-lg text-gray-600">
+            Click on any category to see 10 products with pricing
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -795,13 +886,20 @@ const ITHardwareProducts = ({ onSelectCategory }) => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">{product.title}</h3>
+                <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
+                  {product.title}
+                </h3>
               </div>
               <div className="p-5">
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">{product.description}</p>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  {product.description}
+                </p>
                 <div className="space-y-2">
                   {product.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-xs text-gray-700">
+                    <div
+                      key={idx}
+                      className="flex items-center text-xs text-gray-700"
+                    >
                       <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
                       <span>{feature}</span>
                     </div>
@@ -813,8 +911,8 @@ const ITHardwareProducts = ({ onSelectCategory }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // Accessories & Connectivity Component
 const AccessoriesConnectivity = ({ onSelectCategory }) => {
@@ -822,7 +920,8 @@ const AccessoriesConnectivity = ({ onSelectCategory }) => {
     {
       icon: Cable,
       title: "Cables, Routers & Connectivity",
-      image: "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=600&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=600&h=400&fit=crop",
       items: [
         "HDMI & USB Cables",
         "Network Cables",
@@ -836,7 +935,8 @@ const AccessoriesConnectivity = ({ onSelectCategory }) => {
     {
       icon: Laptop,
       title: "Laptop Accessories",
-      image: "https://images.unsplash.com/photo-1587829191301-755f88d2c69b?w=600&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1587829191301-755f88d2c69b?w=600&h=400&fit=crop",
       items: [
         "Laptop Bags & Backpacks",
         "Keyboards & Mice",
@@ -847,14 +947,18 @@ const AccessoriesConnectivity = ({ onSelectCategory }) => {
       ],
       categoryKey: "laptopAccessories",
     },
-  ]
+  ];
 
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section id="accessories-connectivity" className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Accessories & Connectivity</h2>
-          <p className="text-lg text-gray-600">Click to see 10 products with pricing</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            Accessories & Connectivity
+          </h2>
+          <p className="text-lg text-gray-600">
+            Click to see 10 products with pricing
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {accessories.map((category, index) => (
@@ -872,13 +976,18 @@ const AccessoriesConnectivity = ({ onSelectCategory }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 flex items-center">
                   <category.icon className="w-8 h-8 text-white mr-3" />
-                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">
+                    {category.title}
+                  </h3>
                 </div>
               </div>
               <div className="p-6">
                 <ul className="space-y-2">
                   {category.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
+                    <li
+                      key={idx}
+                      className="flex items-start text-sm text-gray-700"
+                    >
                       <span className="text-green-500 mr-2 mt-0.5">✓</span>
                       <span>{item}</span>
                     </li>
@@ -890,8 +999,8 @@ const AccessoriesConnectivity = ({ onSelectCategory }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // Repair Services Component
 const RepairServices = ({ onSelectCategory }) => {
@@ -899,8 +1008,10 @@ const RepairServices = ({ onSelectCategory }) => {
     {
       icon: Laptop,
       title: "Laptop Repair",
-      description: "Expert laptop repair services for all brands. Quick turnaround with genuine parts.",
-      image: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+      description:
+        "Expert laptop repair services for all brands. Quick turnaround with genuine parts.",
+      image:
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
       services: [
         "Screen Replacement",
         "Keyboard Repair",
@@ -915,8 +1026,10 @@ const RepairServices = ({ onSelectCategory }) => {
     {
       icon: Smartphone,
       title: "Mobile Repair",
-      description: "Professional mobile repair with certified technicians. Same-day service available.",
-      image: "https://images.unsplash.com/photo-1621905251918-419cd12efd1e?w=800",
+      description:
+        "Professional mobile repair with certified technicians. Same-day service available.",
+      image:
+        "https://images.unsplash.com/photo-1621905251918-419cd12efd1e?w=800",
       services: [
         "Screen Replacement",
         "Battery Replacement",
@@ -928,18 +1041,21 @@ const RepairServices = ({ onSelectCategory }) => {
       categoryKey: "repairs",
       serviceType: "mobile",
     },
-  ]
+  ];
 
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="repair-services" className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-100 rounded-full mb-3">
             <Wrench className="w-7 h-7 text-blue-600" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Expert Repair Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            Expert Repair Services
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Certified technicians with years of experience. Click to see services with pricing.
+            Certified technicians with years of experience. Click to see
+            services with pricing.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -993,7 +1109,9 @@ const RepairServices = ({ onSelectCategory }) => {
 
         {/* Why Choose Us Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Why Choose Our Repair Services?</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            Why Choose Our Repair Services?
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <Award className="w-10 h-10 mx-auto mb-3 opacity-90" />
@@ -1019,12 +1137,12 @@ const RepairServices = ({ onSelectCategory }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // Main Solutions Page
 export default function SolutionsPage() {
-  const [selectedCategory, setSelectedCategory] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <main className="min-h-screen bg-white">
@@ -1042,5 +1160,5 @@ export default function SolutionsPage() {
         />
       )}
     </main>
-  )
+  );
 }
