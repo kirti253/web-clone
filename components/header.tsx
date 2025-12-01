@@ -83,24 +83,6 @@ export default function Header() {
               Solutions
             </Link>
             <Link
-              href="/recruitment"
-              className="hover:text-blue-600 transition whitespace-nowrap"
-            >
-              Recruitment
-            </Link>
-            <Link
-              href="/training"
-              className="hover:text-blue-600 transition whitespace-nowrap"
-            >
-              Training
-            </Link>
-            <Link
-              href="/career"
-              className="hover:text-blue-600 transition whitespace-nowrap"
-            >
-              Career
-            </Link>
-            <Link
               href="/clients"
               className="hover:text-blue-600 transition whitespace-nowrap"
             >
@@ -152,27 +134,6 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
             >
               Solutions
-            </Link>
-            <Link
-              href="/recruitment"
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Recruitment
-            </Link>
-            <Link
-              href="/training"
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Training
-            </Link>
-            <Link
-              href="/career"
-              className="hover:text-blue-600 transition py-2 px-2 hover:bg-blue-50 rounded"
-              onClick={() => setIsOpen(false)}
-            >
-              Career
             </Link>
             <Link
               href="/clients"

@@ -14,6 +14,8 @@ import {
   X,
   ShoppingCart,
 } from "lucide-react"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 // Product data for all categories
 const PRODUCT_DATA = {
@@ -1026,10 +1028,12 @@ export default function SolutionsPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <Header />
       <SolutionsHero />
       <ITHardwareProducts onSelectCategory={setSelectedCategory} />
       <AccessoriesConnectivity onSelectCategory={setSelectedCategory} />
       <RepairServices onSelectCategory={setSelectedCategory} />
+      <Footer />
       {selectedCategory && (
         <ProductListModal
           category={selectedCategory}
