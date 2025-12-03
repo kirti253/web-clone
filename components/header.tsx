@@ -19,7 +19,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex flex-wrap items-center gap-3 sm:gap-6">
             <span className="text-blue-600">
-              🏠 Welcome to Savekey Technology
+              🏠 Welcome to enstoppesolutions
             </span>
             <span className="text-gray-600 hidden sm:inline">
               📧 info@savekeytechnology.com
